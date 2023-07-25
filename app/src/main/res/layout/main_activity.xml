@@ -1,6 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:gravity="center">
 
+    <TableRow
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/b1"
+            android:layout_width="40pt"
+            android:layout_height="40pt"
+            android:layout_marginLeft="3pt"
+            android:backgroundTint="#FFFFFF" />
+
+        <Button
+            android:id="@+id/b2"
+            android:layout_width="40pt"
+            android:layout_height="40pt"
+            android:layout_marginLeft="3pt"
+            android:backgroundTint="#FFFFFF" />
+
+        <Button
+            android:id="@+id/b3"
+            android:layout_width="40pt"
+            android:layout_height="40pt"
+            android:layout_marginLeft="3pt"
+            android:backgroundTint="#FFFFFF" />
+    </TableRow>
+
+    <TableRow
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/b4"
+            android:layout_width="40pt"
+            android:layout_height="40pt"
+            android:layout_marginLeft="3pt"
+            android:backgroundTint="#FFFFFF" />
+
+        <Button
+            android:id="@+id/b5"
+            android:layout_width="40pt"
+            android:layout_height="40pt"
+            android:layout_marginLeft="3pt"
+            android:backgroundTint="#FFFFFF" />
+
+        <Button
+            android:id="@+id/b6"
+            android:layout_width="40pt"
+            android:layout_height="40pt"
+            android:layout_marginLeft="3pt"
+            android:backgroundTint="#FFFFFF" />
+    </TableRow>
+
+    <TableRow
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/b7"
+            android:layout_width="40pt"
+            android:layout_height="40pt"
+            android:layout_marginLeft="3pt"
+            android:backgroundTint="#FFFFFF" />
+
+        <Button
+            android:id="@+id/b8"
+            android:layout_width="40pt"
+            android:layout_height="40pt"
+            android:layout_marginLeft="3pt"
+            android:backgroundTint="#FFFFFF" />
+
+        <Button
+            android:id="@+id/b9"
+            android:layout_width="40pt"
+            android:layout_height="40pt"
+            android:layout_marginLeft="3pt"
+            android:backgroundTint="#FFFFFF" />
+    </TableRow>
 </TableLayout>
