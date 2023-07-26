@@ -3,10 +3,10 @@ package com.example.tictactoe
 import android.graphics.Color
 import android.os.Bundle
 import android.view.View
-import android.content.Context
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import java.util.Random
 
 class MainActivity : AppCompatActivity(){
 
@@ -41,6 +41,8 @@ class MainActivity : AppCompatActivity(){
             btnSelected.setBackgroundColor(Color.RED)
             player1.add(btnID)
             activePlayer = 2
+            autoPlay()
+
         }else{
             btnSelected.text = "O"
             btnSelected.setBackgroundColor(Color.GREEN)
@@ -50,7 +52,7 @@ class MainActivity : AppCompatActivity(){
         btnSelected.isEnabled = false
         checkWinner()
     }
-    private fun checkWinner(){
+    fun checkWinner(){
         var win = -1
         //practice will improve it later
         //Rows
@@ -99,5 +101,31 @@ class MainActivity : AppCompatActivity(){
         }else if (win == 2){
             Toast.makeText(this, "Player2 wins the game", Toast.LENGTH_LONG).show()
         }
+    }
+    fun autoPlay(){
+        var emptyBtn = ArrayList<Int>()
+
+        for (btnId in 1..9){
+            if(!(player1.contains(btnId)|| player2.contains(btnId))){
+                emptyBtn.add(btnId)
+            }
+        }
+        val r = Random()
+        val ranIndex = r.nextInt(emptyBtn.size)
+        val btnId = emptyBtn[ranIndex]
+
+        var btnSelected:Button =when(btnId){
+            1 -> findViewById(R.id.b1)
+            2 -> findViewById(R.id.b2)
+            3 -> findViewById(R.id.b3)
+            4 -> findViewById(R.id.b4)
+            5 -> findViewById(R.id.b5)
+            6 -> findViewById(R.id.b6)
+            7 -> findViewById(R.id.b7)
+            8 -> findViewById(R.id.b8)
+            9 -> findViewById(R.id.b9)
+            else -> findViewById(R.id.b1)
+        }
+        playGame(btnId,btnSelected)
     }
 }
