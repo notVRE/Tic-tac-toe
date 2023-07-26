@@ -2,13 +2,13 @@
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
+    android:background="#C1A9A9"
     android:gravity="center">
 
     <TableRow
-        android:gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:gravity="center">
 
         <Button
             android:id="@+id/b1"
@@ -17,83 +17,92 @@
             android:layout_height="40pt"
             android:layout_marginStart="3pt"
             android:backgroundTint="#FFFFFF"
-            android:contentDescription="&quot;&quot;" />
+            android:contentDescription="&quot;&quot;"
+            android:onClick="btnClick" />
 
         <Button
             android:id="@+id/b2"
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="40pt"
             android:layout_height="40pt"
             android:layout_marginStart="3pt"
             android:backgroundTint="#FFFFFF"
             android:contentDescription=""
-            style="?android:attr/buttonBarButtonStyle" />
+            android:onClick="btnClick" />
 
         <Button
             android:id="@+id/b3"
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="40pt"
             android:layout_height="40pt"
             android:layout_marginStart="3pt"
             android:backgroundTint="#FFFFFF"
-            style="?android:attr/buttonBarButtonStyle" />
+            android:onClick="btnClick" />
     </TableRow>
 
     <TableRow
-        android:gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:gravity="center">
 
         <Button
             android:id="@+id/b4"
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="40pt"
             android:layout_height="40pt"
             android:layout_marginStart="3pt"
             android:backgroundTint="#FFFFFF"
-            style="?android:attr/buttonBarButtonStyle" />
+            android:onClick="btnClick" />
 
         <Button
             android:id="@+id/b5"
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="40pt"
             android:layout_height="40pt"
             android:layout_marginStart="3pt"
             android:backgroundTint="#FFFFFF"
-            style="?android:attr/buttonBarButtonStyle" />
+            android:onClick="btnClick" />
 
         <Button
             android:id="@+id/b6"
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="40pt"
             android:layout_height="40pt"
             android:layout_marginStart="3pt"
             android:backgroundTint="#FFFFFF"
-            style="?android:attr/buttonBarButtonStyle" />
+            android:onClick="btnClick" />
     </TableRow>
 
     <TableRow
-        android:gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:gravity="center">
 
         <Button
             android:id="@+id/b7"
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="40pt"
             android:layout_height="40pt"
             android:layout_marginStart="3pt"
             android:backgroundTint="#FFFFFF"
-            style="?android:attr/buttonBarButtonStyle" />
+            android:onClick="btnClick" />
 
         <Button
             android:id="@+id/b8"
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="40pt"
             android:layout_height="40pt"
             android:layout_marginStart="3pt"
             android:backgroundTint="#FFFFFF"
-            style="?android:attr/buttonBarButtonStyle" />
+            android:onClick="btnClick" />
 
         <Button
             android:id="@+id/b9"
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="40pt"
             android:layout_height="40pt"
             android:layout_marginStart="3pt"
             android:backgroundTint="#FFFFFF"
-            style="?android:attr/buttonBarButtonStyle" />
+            android:onClick="btnClick" />
     </TableRow>
 </TableLayout>
