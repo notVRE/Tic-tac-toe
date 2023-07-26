@@ -12,24 +12,29 @@
 
         <Button
             android:id="@+id/b1"
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="40pt"
             android:layout_height="40pt"
-            android:layout_marginLeft="3pt"
-            android:backgroundTint="#FFFFFF" />
+            android:layout_marginStart="3pt"
+            android:backgroundTint="#FFFFFF"
+            android:contentDescription="&quot;&quot;" />
 
         <Button
             android:id="@+id/b2"
             android:layout_width="40pt"
             android:layout_height="40pt"
-            android:layout_marginLeft="3pt"
-            android:backgroundTint="#FFFFFF" />
+            android:layout_marginStart="3pt"
+            android:backgroundTint="#FFFFFF"
+            android:contentDescription=""
+            style="?android:attr/buttonBarButtonStyle" />
 
         <Button
             android:id="@+id/b3"
             android:layout_width="40pt"
             android:layout_height="40pt"
-            android:layout_marginLeft="3pt"
-            android:backgroundTint="#FFFFFF" />
+            android:layout_marginStart="3pt"
+            android:backgroundTint="#FFFFFF"
+            style="?android:attr/buttonBarButtonStyle" />
     </TableRow>
 
     <TableRow
@@ -41,22 +46,25 @@
             android:id="@+id/b4"
             android:layout_width="40pt"
             android:layout_height="40pt"
-            android:layout_marginLeft="3pt"
-            android:backgroundTint="#FFFFFF" />
+            android:layout_marginStart="3pt"
+            android:backgroundTint="#FFFFFF"
+            style="?android:attr/buttonBarButtonStyle" />
 
         <Button
             android:id="@+id/b5"
             android:layout_width="40pt"
             android:layout_height="40pt"
-            android:layout_marginLeft="3pt"
-            android:backgroundTint="#FFFFFF" />
+            android:layout_marginStart="3pt"
+            android:backgroundTint="#FFFFFF"
+            style="?android:attr/buttonBarButtonStyle" />
 
         <Button
             android:id="@+id/b6"
             android:layout_width="40pt"
             android:layout_height="40pt"
-            android:layout_marginLeft="3pt"
-            android:backgroundTint="#FFFFFF" />
+            android:layout_marginStart="3pt"
+            android:backgroundTint="#FFFFFF"
+            style="?android:attr/buttonBarButtonStyle" />
     </TableRow>
 
     <TableRow
@@ -68,21 +76,24 @@
             android:id="@+id/b7"
             android:layout_width="40pt"
             android:layout_height="40pt"
-            android:layout_marginLeft="3pt"
-            android:backgroundTint="#FFFFFF" />
+            android:layout_marginStart="3pt"
+            android:backgroundTint="#FFFFFF"
+            style="?android:attr/buttonBarButtonStyle" />
 
         <Button
             android:id="@+id/b8"
             android:layout_width="40pt"
             android:layout_height="40pt"
-            android:layout_marginLeft="3pt"
-            android:backgroundTint="#FFFFFF" />
+            android:layout_marginStart="3pt"
+            android:backgroundTint="#FFFFFF"
+            style="?android:attr/buttonBarButtonStyle" />
 
         <Button
             android:id="@+id/b9"
             android:layout_width="40pt"
             android:layout_height="40pt"
-            android:layout_marginLeft="3pt"
-            android:backgroundTint="#FFFFFF" />
+            android:layout_marginStart="3pt"
+            android:backgroundTint="#FFFFFF"
+            style="?android:attr/buttonBarButtonStyle" />
     </TableRow>
 </TableLayout>
