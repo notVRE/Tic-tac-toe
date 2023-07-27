@@ -33,8 +33,9 @@ class MainActivity : AppCompatActivity(){
         playGame(btnId, btnSelected)
     }
     var activePlayer = 1
-    var player1 = ArrayList<Int>()
-    var player2 = ArrayList<Int>()
+    val player1 = ArrayList<Int>()
+    val player2 = ArrayList<Int>()
+
     fun playGame(btnID: Int, btnSelected:Button){
         if (activePlayer == 1 ){
             btnSelected.text = "X"
@@ -54,7 +55,6 @@ class MainActivity : AppCompatActivity(){
     }
     fun checkWinner(){
         var win = -1
-
         //practice will improve it later
         //Rows
         if (player1.contains(1) && player1.contains(2) && player1.contains(3)){
@@ -74,7 +74,6 @@ class MainActivity : AppCompatActivity(){
         }else if (player2.contains(7) && player2.contains(8) && player2.contains(9)){
             win = 2
         }
-
         //columns
         if (player1.contains(1) && player1.contains(4) && player1.contains(7)){
             win = 1
@@ -89,7 +88,6 @@ class MainActivity : AppCompatActivity(){
         if (player2.contains(2) && player2.contains(5) && player2.contains(8)){
             win = 2
         }
-
         if (player1.contains(3) && player1.contains(6) && player1.contains(9)){
             win = 1
         }
@@ -106,25 +104,33 @@ class MainActivity : AppCompatActivity(){
             Toast.makeText(this, "Player2 wins the game", Toast.LENGTH_LONG).show()
             restart()
         }
-    }
-    fun autoPlay(){
-        var emptyBtn = ArrayList<Int>()
+        //Draw
+        if (win == -1 && player1.size + player2.size == 9){
+            Toast.makeText(this, "Draw", Toast.LENGTH_LONG).show()
+            restart()
+        }
 
+    }
+
+    fun autoPlay(){
+        val emptyBtn = ArrayList<Int>()
         for (btnId in 1..9){
-            if(!(player1.contains(btnId)|| player2.contains(btnId))){
+            if(!(player1.contains(btnId) || player2.contains(btnId))){
                 emptyBtn.add(btnId)
             }
         }
 
-        if(emptyBtn.size==0){
+        if(emptyBtn.isEmpty()){
             restart()
+            return
         }
 
         val r = Random()
         val ranIndex = r.nextInt(emptyBtn.size)
         val btnId = emptyBtn[ranIndex]
 
-        var btnSelected:Button =when(btnId){
+        var btnSelected:Button?
+        btnSelected =when(btnId){
             1 -> findViewById(R.id.b1)
             2 -> findViewById(R.id.b2)
             3 -> findViewById(R.id.b3)
@@ -136,6 +142,7 @@ class MainActivity : AppCompatActivity(){
             9 -> findViewById(R.id.b9)
             else -> findViewById(R.id.b1)
         }
+
         playGame(btnId,btnSelected)
     }
 
@@ -147,7 +154,8 @@ class MainActivity : AppCompatActivity(){
         player2.clear()
 
         for (i in 1..9) {
-            var btnSelected: Button = when (i) {
+            var btnSelected: Button?
+            btnSelected = when (i) {
                 1 -> findViewById(R.id.b1)
                 2 -> findViewById(R.id.b2)
                 3 -> findViewById(R.id.b3)
@@ -161,11 +169,12 @@ class MainActivity : AppCompatActivity(){
             }
             btnSelected.text = ""
             btnSelected.setBackgroundColor(Color.WHITE)
+            btnSelected.isClickable = true
             btnSelected.isEnabled = true
         }
         Toast.makeText(
             this,
-            "Player1 $player1WinCount, Player2: $player2WinCount",
+            "Player1: $player1WinCount, Player2: $player2WinCount",
             Toast.LENGTH_LONG
         ).show()
     }
