@@ -54,6 +54,7 @@ class MainActivity : AppCompatActivity(){
     }
     fun checkWinner(){
         var win = -1
+
         //practice will improve it later
         //Rows
         if (player1.contains(1) && player1.contains(2) && player1.contains(3)){
@@ -97,9 +98,13 @@ class MainActivity : AppCompatActivity(){
         }
         //Display winner
         if (win == 1){
+            player1WinCount += 1
             Toast.makeText(this, "Player1 wins the game", Toast.LENGTH_LONG).show()
+            restart()
         }else if (win == 2){
+            player2WinCount += 1
             Toast.makeText(this, "Player2 wins the game", Toast.LENGTH_LONG).show()
+            restart()
         }
     }
     fun autoPlay(){
@@ -110,6 +115,11 @@ class MainActivity : AppCompatActivity(){
                 emptyBtn.add(btnId)
             }
         }
+
+        if(emptyBtn.size==0){
+            restart()
+        }
+
         val r = Random()
         val ranIndex = r.nextInt(emptyBtn.size)
         val btnId = emptyBtn[ranIndex]
@@ -127,5 +137,36 @@ class MainActivity : AppCompatActivity(){
             else -> findViewById(R.id.b1)
         }
         playGame(btnId,btnSelected)
+    }
+
+    var player1WinCount = 0
+    var player2WinCount = 0
+    fun restart() {
+        activePlayer = 1
+        player1.clear()
+        player2.clear()
+
+        for (i in 1..9) {
+            var btnSelected: Button = when (i) {
+                1 -> findViewById(R.id.b1)
+                2 -> findViewById(R.id.b2)
+                3 -> findViewById(R.id.b3)
+                4 -> findViewById(R.id.b4)
+                5 -> findViewById(R.id.b5)
+                6 -> findViewById(R.id.b6)
+                7 -> findViewById(R.id.b7)
+                8 -> findViewById(R.id.b8)
+                9 -> findViewById(R.id.b9)
+                else -> findViewById(R.id.b1)
+            }
+            btnSelected.text = ""
+            btnSelected.setBackgroundColor(Color.WHITE)
+            btnSelected.isEnabled = true
+        }
+        Toast.makeText(
+            this,
+            "Player1 $player1WinCount, Player2: $player2WinCount",
+            Toast.LENGTH_LONG
+        ).show()
     }
 }
